@@ -7,7 +7,7 @@
 # for known passwords (potential admin privelages)
 # Replace dots with valid vid and pid for what you want to spoof and emulate as 
 # to find more go to www.kali-usb.org/usb-ids
-# In the case of your own networks replace <iPhone> with your network name and <yougotme> with your desired file name 
+# In the case of your own networks replace <iPhone> with your network name and <pass> with your desired file name 
 ATTACKMODE STORAGE HID
 Q DELAY 5000
 Q GUI r
